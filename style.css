@@ -1,0 +1,118 @@
+:root {
+  --success-color: #22c55e;
+  --error-color: #ef4444;
+  --primary-color: #2427f3;
+  --primary-hover: #4f46e5;
+  --bg-gradient: linear-gradient(135deg, #caffa7, #7991b1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-gradient);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  width: 420px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+}
+
+h2 {
+  text-align: center;
+  margin: 0 0 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form {
+  padding: 40px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-control input {
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background-color: #f9fafb;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.form-control.success input {
+  border-color: var(--success-color);
+}
+
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  font-size: 12px;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  padding: 12px;
+  margin-top: 25px;
+  width: 100%;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+}
+
+.form button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
